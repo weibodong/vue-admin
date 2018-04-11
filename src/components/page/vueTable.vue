@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="text" v-model='search' />
-    <ul v-for="item in searchData ">
+    <ul v-for="item in searchData">
       <li>{{item.name}},价格:￥{{item.price}}</li>
     </ul>
   </div>
@@ -15,7 +15,11 @@
           name: '苹果',
           price: 25,
           category: "水果"
-        }, {
+        },{
+          name: '苹龙121212',
+          price: 25,
+          category: "水果"
+        },{
           name: '香蕉',
           price: 15,
           category: "水果"

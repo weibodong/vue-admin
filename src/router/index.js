@@ -4,12 +4,6 @@ import login from '../components/page/login'
 import home from '../components/common/home'
 import basetable from '../components/page/basetable'
 import vueTable from '../components/page/vueTable'
-import baseform from '../components/page/baseform'
-import vueeditor from '../components/page/vueeditor'
-import markdown from '../components/page/markdown'
-import upload from '../components/page/upload'
-import basecharts from '../components/page/basecharts'
-import drag from '../components/page/drag'
 
 Vue.use(Router)
 
@@ -23,12 +17,13 @@ export default new Router({
       children:[
         {path:'/',component:basetable},
         {path:'/vueTable',component:vueTable},
-        {path:'/baseform',component:baseform},
-        {path:'/vueeditor',component:vueeditor},
-        {path:'/markdown',component:markdown},
-        {path:'/upload',component:upload},
-        {path:'/basecharts',component:basecharts},
-        {path:'/drag',component: resolve => require(['../components/page/drag.vue'], resolve)}
+        {path:'/baseform',component: resolve => require(['../components/page/baseform.vue'], resolve)},
+        {path:'/vueeditor',component: resolve => require(['../components/page/vueeditor.vue'], resolve)},
+        {path:'/markdown',component: resolve => require(['../components/page/markdown.vue'], resolve)},
+        {path:'/upload',component: resolve => require(['../components/page/upload.vue'], resolve)},
+        {path:'/basecharts',component: resolve => require(['../components/page/basecharts.vue'], resolve)},
+        {path:'/drag',component: resolve => require(['../components/page/drag.vue'], resolve)},
+        {path:'/vueCheckBox',component: resolve => require(['../components/page/vueCheckBox.vue'], resolve)}
 
       ]
     }

@@ -134,7 +134,23 @@
         return this.tableData;
       }
     },
+    mounted(){
+      this.aa()
+    },
     methods: {
+      aa() {  //数组对象合并且去重
+        this.abc = [{ name: 'lala', val: 1 }, { name: 'kaka', val: 2 }]
+        let qwe = [{ name: 'lala', val: 1 }, { name: 'gaga', val: 3 }]
+  
+        this.abc = this.abc.concat(qwe)
+        //数组对象去重
+        var hash = {};
+        this.abc = this.abc.reduce(function(item, next) {
+          hash[next.val] ? '' : hash[next.val] = true && item.push(next);
+          return item
+        }, [])
+        console.log(this.abc)
+      },
       lookFn(row) { //查看
         this.isToSee = true
         this.isDisabled = true
